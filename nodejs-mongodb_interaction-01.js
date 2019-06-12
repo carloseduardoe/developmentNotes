@@ -84,7 +84,7 @@ checkCacheIds = async (cacheList, cacheCollection) => {
             cacheList[doc.label] = { _id: doc._id };
         }
     }
-}
+};
 
 insertTypes = async () => {
     let res;
@@ -94,7 +94,7 @@ insertTypes = async () => {
         );
         records[index] = res.ops[0];
     }));
-}
+};
 
 fillDocumentDefaults = (item, cacheCollection) => {
     let document = {}; 
@@ -131,9 +131,9 @@ fillDocumentDefaults = (item, cacheCollection) => {
             break;
     }
     return document;
-}
+};
 
 endProcess = (exitcode) => {
     dbClient.close();
     process.exit(exitcode || 0);
-}
+};
