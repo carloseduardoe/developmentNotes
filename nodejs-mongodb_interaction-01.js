@@ -81,7 +81,7 @@ checkCacheIds = async (cacheList, cacheCollection) => {
                 );
                 doc = res.ops[0];
             }
-            cacheList[doc.label] = { _id: doc._id };
+            cacheList[doc.label] = doc._id;
         }
     }
 };
